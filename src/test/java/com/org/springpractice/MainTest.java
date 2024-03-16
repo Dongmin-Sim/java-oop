@@ -1,8 +1,6 @@
-package com.org.javaoop;
+package com.org.springpractice;
 
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class MainTest {
     @Test
@@ -13,5 +11,4 @@ class MainTest {
         // when & then
         Main.main(args);
     }
-
 }

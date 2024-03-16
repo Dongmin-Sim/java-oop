@@ -1,15 +1,20 @@
-package com.org.javaoop.service;
+package com.org.springpractice.service;
 
-import com.org.javaoop.logic.JavaSort;
-import com.org.javaoop.logic.Sort;
+import com.org.springpractice.logic.Sort;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class SortService {
 
     private final Sort<String> sort;
 
-    public SortService(Sort<String> sort) {
+    public SortService(
+            @Qualifier(value = "bubbleSort")
+            Sort<String> sort
+    ) {
         this.sort = sort;
         System.out.println("구현체 : " + sort.getClass().getName());
     }
